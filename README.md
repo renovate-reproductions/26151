@@ -1,17 +1,19 @@
-# minimal-reproduction-template
+# 26151
 
-First, read the [Renovate minimal reproduction instructions](https://github.com/renovatebot/renovate/blob/main/docs/development/minimal-reproductions.md).
-
-Then replace the current `h1` with the Renovate Issue/Discussion number.
+Reproduction for [Renovate issue 26151](https://github.com/renovatebot/renovate/discussions/26151#discussioncomment-10020310)
 
 ## Current behavior
 
-Explain the current behavior here.
+Renovate creates PRs for Jenkins plugins that do not match the version constraints. It seems to be pulling the latest version regardless of what constraints have been set. For example, the dark-theme plugin requires Jenkins version 2.453.
+![image](https://github.com/bsloan-icl/renovate-version-constraint-for-jenkins/assets/85300277/463a3570-2050-4446-86da-3af285229b52)
+
+However, when setting a constraint of <=2.452 in renovate.json, it still creates a PR for the latest version of the dark-theme plugin.
+
 
 ## Expected behavior
 
-Explain the expected behavior here.
+Renovate shouldn't be creating PRs for Jenkins plugins that have a "requiredCore" value that doesn't match the constraint.
 
 ## Link to the Renovate issue or Discussion
 
-Put your link to the Renovate issue or Discussion here.
+https://github.com/renovatebot/renovate/discussions/26151#discussioncomment-10020310
