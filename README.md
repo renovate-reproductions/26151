@@ -9,7 +9,6 @@ Renovate creates PRs for Jenkins plugins that do not match the version constrain
 
 However, when setting a constraint of <=2.452 in renovate.json, it still creates a PR for the latest version of the dark-theme plugin.
 
-
 ## Expected behavior
 
 Renovate shouldn't be creating PRs for Jenkins plugins that have a "requiredCore" value that doesn't match the constraint.
