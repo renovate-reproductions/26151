@@ -6,7 +6,7 @@
   },
   "packageRules": [{
     "matchDatasources": ["jenkins-plugins"],
-    "versioning": "loose"
+    "versioning": "semver-coerced"
   }],
   "enabledManagers": ["jenkins"]
 }
