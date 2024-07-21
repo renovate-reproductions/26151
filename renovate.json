@@ -2,7 +2,11 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "constraintsFiltering": "strict",
   "constraints": {
-    "jenkins": "(,2.452]"
+    "jenkins": "<=2.452"
   },
+  "packageRules": [{
+    "matchDatasources": ["jenkins-plugins"],
+    "versioning": "semver-coerced"
+  }],
   "enabledManagers": ["jenkins"]
 }
